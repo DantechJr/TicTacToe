@@ -1,59 +1,124 @@
 * {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.btn{
-    width: 300px;
-    margin-top: 10px;
+body {
+  background-image: linear-gradient(
+      rgba(20, 20, 20, 0.69),
+      rgba(20, 20, 20, 0.69)
+    ),
+    url(https://vsthemes.org/uploads/posts/2022-09/1662333806_preview.webp);
+  background-position: center;
+  background-size: cover;
 }
 
-
-
-.cell{
-    width: 100px;
-    height: 100px;
-    border: 2px solid;
-    box-shadow: 0 0 0 2px;
-    line-height: 75px;
-    font-size: 50px;
-    cursor: pointer;
-    background-color: beige;
+.race-container,
+.player-option {
+  columns: 2;
 }
 
-#gameContainer{
-    margin-top: 150px;
-    font-family:cursive;
-    text-align: center;
+.form-control {
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
 }
 
-
-#cellContainer{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    width: 225px;
-    margin-left: auto;
-    margin-right: auto;
-
+#winScore1,
+#winScore2,
+#gameMode1,
+#gameMode2 {
+  accent-color: purple;
 }
 
-.container1{
-    margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    border: black solid 1px;
-    background-color: aliceblue;
-    border-radius: 10px;
-    box-shadow: 5px 10px #888888;
-    height: 400px;
-    width: 400px;
-    text-align: center;
-    padding: 10px;
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container2{
-    margin-left: auto;
-    margin-right: auto;
-    display: none;
+#game-settings,
+#game-board {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.game-hidden {
+  display: none;
+}
+
+#cells {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+#cells div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  cursor: pointer;
+  font-family: "Rubik Pixels";
+  font-weight: bolder;
+}
+
+#cells div:hover {
+  background-color: #dde6ed;
+}
+
+#turnMessage {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#scores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 15px;
+  background-color: black;
+  color: white;
+  padding: 0.8em 4em;
+  border-radius: 10px;
+  font-size: medium;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.X {
+  color: purple;
+}
+
+.O {
+  color: green;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  padding: 20px;
 }
